@@ -1,0 +1,92 @@
+// This archecticute assumes a MOBILE FIRST Approach and scales up accordingly
+// with susy grid and breakpoint gems
+
+@import "_widgets"
+
+html, body
+  height: 100%
+
+.page
+  height: 100%
+
+  // Grid Tester
+  .grid-testers
+
+    .template-tester-button
+      +span-columns( 1, 10 )
+      font-size: 12px
+      font-weight: bold
+
+      &:last-of-type
+        +span-columns( 1 omega, 10 )
+
+  // Page level blocks
+  .page-content
+    +container()
+    +susy-grid-background()
+  
+  .page-main
+    +span-columns( 12, 12 )
+    background: red
+
+  .page-header,
+  .page-footer
+    +span-columns( 12, 12 )
+    min-height: 20px
+    background: blue
+
+    +breakpoint(500px)
+      min-height: 50px 
+
+  .page-header
+
+    .company-logo
+      max-height: 60px
+
+    .company-tagline
+      color: white
+      display: inline
+
+  .page-footer
+    text-align: center
+
+    .footer-nav-list-item
+      +horizontal()
+
+    .footer-nav-list-item-link
+      color: white
+
+  .page-main
+
+    *
+      transition: all .3s ease
+      -webkit-transform: translateZ(0)
+
+  // Template level blocks
+  // See templates folder for other iterations
+  .main-primary, 
+  .main-secondary
+    height: 70%
+
+  .main-tertiary
+    height: 30%
+
+  .main-primary
+    +span-columns( 12, 12 )
+    background: orange 
+
+    +breakpoint(500px)
+      +span-columns( 8, 12 )
+
+  .main-secondary
+    +span-columns( 12, 12 )
+    background: green
+
+    +breakpoint(500px)
+      +span-columns( 4 omega, 12 )
+
+  .main-tertiary
+    +span-columns( 12, 12 )
+    background: purple
+
+  @import "_templates"
