@@ -1,71 +1,69 @@
 <!doctype html>
-<html>
+<html class="no-js" ng-app="jeffscottwardWebsite">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Jeffscottward.github.io by jeffscottward</title>
+    <title>Jeff Ward - UI Engineer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!-- build:css({.tmp,app}) styles/vendor.css -->
+    <link rel="stylesheet" href="styles/vendor.css">
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Jeffscottward.github.io</h1>
-        <img src="jeff-scott-ward-gravitar.jpg" style="max-width:100%;">
-        <p>Homepage for Front-end Engineer Jeff Scott Ward</p>
-        <p class="view"><a href="https://github.com/jeffscottward">View My GitHub Profile</a></p>
-      </header>
-      <section>
-          <h3>Prototypes</h3>
-          <ul>
-            <li>
-              <a class="anchor" href="xbox">Xbox 360 UI Prototype</a>
-            </li>
-            <li>
-              <a class="anchor" href="oosass-poc">Object Oriented SASS Grid Prototype</a>
-            </li>
-          </ul>
-          <h3>Projects</h3>
-          <ul>
-            <li>
-              <a class="anchor" href="http://www.toyota.com/teendrive365/">Toyota.com/TeenDrive365</a>
-            </li>
-            <li>
-              <a class="anchor" href="http://www.Acthar.com">Acthar.com</a>
-            </li>
-            <li>
-              <a class="anchor" href="http://www.Actemra.com ">Actemra.com </a>
-            </li>
-            <li>
-              <a class="anchor" href="http://www.MaterialWrld.com">MaterialWrld.com</a>
-            </li>
-            <li>
-              <a class="anchor" href="http://www.unlockable.com">Unlockable.com</a>
-            </li>
-            <li>
-              <a class="anchor" href="http://goo.gl/ltk6AA">Unlockable Demo</a>
-            </li>
-            <li>
-              <a class="anchor" href="http://www.oysterbarny.com">OysterBarNY.com</a>
-            </li>
-            <li>
-              <a class="anchor" href="http://www.pickettspress.com">PickettsPress.com</a>
-            </li>
-            <li>
-              <a class="anchor" href="http://www.exceeddigital.com">ExceedDigital.com</a>
-            </li>
-          </ul>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <ng-include src="'/partials/header.html'"></ng-include>
+
+    <div ui-view></div>
+
+    <ng-include src="'/partials/footer.html'"></ng-include>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/restangular/dist/restangular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <script src="bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/jeffscottwardWebsite.js"></script>
+    <script src="scripts/home/home-ctrl.js"></script>
+    <script src="scripts/contact/contact-ctrl.js"></script>
+    <!-- inject:partials -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
   </body>
 </html>
