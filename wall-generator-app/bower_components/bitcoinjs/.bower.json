@@ -1,0 +1,50 @@
+{
+  "name": "bitcoinjs",
+  "title": "bitcoinjs",
+  "appPath": "app",
+  "description": "bitcoinjs-lib for bower",
+  "keywords": [
+    "bitcoin",
+    "bitcoinjs",
+    "bitcoinjs-lib",
+    "money",
+    "crypto",
+    "crypto-currency"
+  ],
+  "homepage": "https://github.com/jeffscottward/bitcoinjs-bower-pkg",
+  "author": {
+    "name": "Jeff Ward"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jeffscottward/bitcoinjs-bower-pkg.git"
+  },
+  "bugs": "https://github.com/jeffscottward/bitcoinjs-bower-pkg/issues",
+  "dependencies": {},
+  "main": [
+    "bitcoinjs.min.js"
+  ],
+  "ignore": [
+    "/*.*",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "authors": [
+    "Jeff Ward <jsward.17@gmail.com>"
+  ],
+  "license": "MIT",
+  "_release": "e21d400344",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e21d40034428ac02b682bc1473ffb90b2a146734"
+  },
+  "_source": "git://github.com/jeffscottward/bitcoinjs-bower-pkg.git",
+  "_target": "*",
+  "_originalSource": "bitcoinjs",
+  "_direct": true
+}
