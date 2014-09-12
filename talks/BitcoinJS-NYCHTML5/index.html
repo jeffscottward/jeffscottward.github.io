@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>reveal.js - The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    </script>
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+            <section data-markdown>
+                ##Bitcoin.js and the Blockchain
+                ###Web 3.0 is here 
+                ####By Jeff Ward
+                ####[@jeffscottward](http://www.twitter.com/jeffscottward)
+                ####[@jeffscottward.github.io](http://jeffscottward.github.io)
+            </section>
+
+            <section data-markdown>
+                ##Digital Currencies 
+
+                Digital currencies have been around for a while. 
+
+                Each is an attempt to use money ***natively*** on the internet, either for general use or for a specific domain. 
+
+                Otherwise payment processors are necessary for each transaction as a trusted 3rd party for transaction disputes.
+            </section>
+
+            <section data-markdown>
+                ## 3rd Party Payment Processors
+                ![Visa](images/visa-logo.svg)
+                ![Mastercard](images/mastercard-logo.svg)
+                ![Paypal](images/paypal-logo.png)
+                ![Venmo](images/venmo-logo.png)
+            </section>
+
+            <section data-markdown>
+                ##Digital Currency Examples
+                ![Reddit Gold](images/reddit-Gold.png)
+                ![Facebook Credits](images/facebook-credits-logo.jpg)
+                ![E-Gold](images/e-gold-logo.gif)
+                ![WebMoney](images/web-money-logo.png)
+                ![Liberty Reserve](images/liberty-reserve-logo.jpg)
+            </section>
+
+            <section data-markdown>
+                 ##Main takeaway
+                 These are all forms of centralization of currency and processing to the benefit of the issuing/processing company.
+
+                 Which means ultimately they can be seized by the government, or hacked by attackers at any point.
+
+                 Centralization is bad!
+            </section>
+
+            <section data-markdown>
+                ##Cryptocurrency Definition
+                A cryptocurrency is a type of digital token that relies on cryptography for chaining together digital signatures of token transfers through peer-to-peer networking, which is secured by decentralization of consensus and trust.
+            </section>
+
+            <section>
+            	<div data-markdown>##wat?</div>
+            	<img src="images/wat.jpg"/>
+            </section>
+
+            <section>
+                <div data-markdown>#Bitcoin in 3 Minutes</div>
+                <a href="http://vimeo.com/63502573" target="_BLANK">Bitcoin in 3 Minutes</a>
+            </section>
+            <section>
+            	<div data-markdown>
+##Corrections to Video 
+- MT-GOX was hacked and shut down after losing $500 million.
+- Current price is currently about $475
+- Top price was $1,200 in November 2013 
+- The algorithm governing bitcoin has reached the first halving point, so now 25 bitcoins are issued every 10 minutes 
+- 13+ Million bitcoins have been mined as of today
+               </div>
+            </section>
+
+            <section>
+                <div data-markdown>##What is bitcoin?</div>
+                <img src="images/what-is-bitcoin.jpg"/>
+            </section>
+
+            <section>
+<div data-markdown>
+##What is bitcoin? 
+</div>
+<div style="width: 45%; display: inline-block; vertical-align: top;" data-markdown>
+![peer-to-peer](images/peer-to-peer.gif)
+</div>
+<div style="width: 45%; display: inline-block; vertical-align: top;" data-markdown>
+  - Bitcoin is a crytopgrahiclly secure, binary style, distributed application, for transactions on the web. 
+  - Bitcoin is meant to mimic how BitTorent shares files, but for transaction information, through a Peer-To-Peer network 
+  - TLDR; Email for Money
+</div>
+            </section>
+                
+            <section>
+							<div data-markdown>
+								##Email for Money
+								</div>
+							<div style="width: 45%; display: inline-block; vertical-align: top;">
+								
+								<div data-markdown>
+									![ECDSA](images/ecdsa.svg)
+								</div>
+								<div data-markdown>
+								![private-key](images/private-key.png) &nbsp; ![public-key](images/public-key.png)
+								</div>
+
+							</div>
+
+							<div style="width: 50%; display: inline-block; vertical-align: top; font-size: 30px; padding-top: 5%;" data-markdown>
+							Much like email, where users would have an address and a password
+
+							Bitcoin users have: 
+
+							- Address (public key)
+							- Password (private key) 
+
+							These keys are generated from an Elliptic Curve Digital Signature Algorithm aka ECDSA, that is applied against any large random number that is provided as an input.
+							</div>
+
+            </section>
+
+            <section>
+                <div data-markdown>#Bitaddress.org</div>
+                <a href="http://bitaddress.org" target="_BLANK">Bitaddress.org</a>
+            </section>
+
+<section>
+<div data-markdown>
+##How are transactions secured? 
+</div>
+<div style="width: 100%; display: inline-block; vertical-align: top;">
+<img src="images/2-transactions.png" height="350"/>
+</div>
+<div data-markdown>
+Transactions are secured by hashing the the entirety of a previous transaction with the intended new owners public key and the previous owners private key.
+</div>
+
+            </section>
+
+            <section>
+<div data-markdown>
+##What is the block chain? 
+</div>
+            	<div style="width: 100%; display: inline-block; vertical-align: top;">
+            		<img src="images/7-reclaiming-disk-space.png" height="300"/>
+            	</div>
+            	<div style="width: 100%; display: inline-block; vertical-align: top; font-size: 25px;" data-markdown>
+                - The blockchain is a public ledger for all bitcoin transactions that have taken place. You can think of this a distributed database. 
+                - Bitcoin "miners" secure the network by collecting transactions around the network and hashing them with timestamps into groups or "blocks". 
+                - Each wallet is required to have a copy of the blockchain (can be provided by a 3rd party API)
+                <!-- - If an attacker attempts to make two identical transactions in different places around the globe, the node that has longer chain (more transaction data) will be accepted and the other discarded. 
+                - This is the solution to the "double spending problem", where even if every bitcoin has a unique hash identifier for each bitcoin, they can be copied just like anything else digital. Therefore, by a consensus network, the bitcoin ecosystem is secure. -->
+              </div>
+            </section>
+
+            <section>
+                <div data-markdown>##BitcoinJS - Wallet Generator App</div>
+                <a href="http://jeffscottward.github.io/apps/wallet-generator-app/index.html" target="_BLANK">Wallet Generator App</a>
+            </section>
+
+            <section>
+                <!-- <div data-markdown>![bitcoinjs]() - Features</div> -->
+                <img src="images/bitcoin-js-logo.png" style="background: white; border-radius:5px; padding: 10px; width: 300px;"/>
+                <div data-markdown>
+- Generate A Large Random Seed Number
+- Generate Public & Private Keys
+- Create Transactions
+- Sign Transactions to Inputs & Outputs
+- and Serialize those Transactions
+- So essentially BitcoinJS deals with the "Front-End" of Bitcoin
+- Bitcoin mining-nodes would be considered "Back-End"
+- Small data manipulation library that feels like Underscore
+                </div>
+            </section>
+
+            <section data-markdown>
+								##Bitcoin Based Alternative Currencies
+
+![Bitcoin](images/bitcoin-icon.png)
+![Litecoin](images/litecoin-logo.png)
+![Dogecoin](images/dogecoin-logo.png)
+![Blackcoin](images/blackcoin-logo.png)
+![Auroracoin](images/auroracoin-logo.png)
+![Namecoin](images/namecoin-logo.png)
+![DarkCoin](images/darkCoin-logo.png)
+![Coinye](images/coinye-west-logo.png)
+
+            </section>
+
+            <section>
+                <div data-markdown>##DogeCoin Community</div>
+                <img src="images/dogecoin-car.jpg"/>
+            </section>
+
+            <section>
+                <div data-markdown>##DogeCoin Community</div>
+                <img src="images/jamiacan-bob-sled-team.jpg"/>
+            </section>
+
+            <section>
+                <div data-markdown>##CoinYe</div>
+                <img src="images/coinye-west-logo.png" height="400"/>
+            </section>
+
+            <section>
+                <div data-markdown>##CoinYe</div>
+                <img src="images/gay-fish.jpg" height="400"/>
+            </section>
+
+            <section>
+            		<div data-markdown>##Bitcoin Nodes in Space!</div>
+            		<img src="images/bitcoin-nodes-space.png" height="400"/>
+            		<div data-markdown>
+- Free electricity from solar power for mining
+- No laws governing its use
+- Futuristic Tax haven (heaven)
+            		</div>
+            </section>
+
+
+            <section>
+            	<div data-markdown>
+##What about Web 3.0? 
+            	</div>
+
+            	<div style="width: 30%; display: inline-block; vertical-align: top;">
+								<img src="images/ethereum-logo.png" style="background: white;"/>
+            	</div>
+
+            	<div style="width: 65%; display: inline-block; vertical-align: top; font-size: 25px;" data-markdown>
+- Bitcoin is only a binary style application. 
+- Coins can be spent or unspent. 0's or 1's. 
+- What if we implemented a programming language on the blockchain that can be evaluated in the virtual environment of any of the transaction mining nodes of the network? 
+- This is the dream of Ethereum ( and other platforms ). 
+- Ethereum and others implement "Smart Contracts" or a binding agreements ( just like paper contracts ) that are written in code as an application, and stored on a blockchain. The results of which, are written to the same blockchain.
+              </div>
+            </section>
+
+            <section>
+							<div data-markdown>##Ethereum</div>
+							<div style="width: 55%; display: inline-block; vertical-align: top;">
+								<img src="images/ether-scripter.png"/>
+							</div>
+							<div style="width: 40%; display: inline-block; vertical-align: top; font-size: 25px;" data-markdown>
+##Automation for:
+- Insurance Policies
+- Last Will and Testament
+- Marriage Contracts
+- Crowdfunding
+- Voter Registration
+- Corporate Governance
+- Decentralized Dropbox
+- Decentralized Stock Exchanges
+- Distributed Autonomous Corporations
+- SKYNET...
+							</div>
+            </section>
+
+            <section>
+                <div data-markdown>##Ethereum and JavaScript</div>
+                <img src="images/ethereum-protocols.png"/>
+            </section>
+
+            <section>
+            	
+            	<div data-markdown>##Links</div>
+            	
+            	<div style="font-size: 25px;">
+                    <p>BitcoinJS:
+                        <a href="http://bitcoinjs.org/" target="_BLANK">http://bitcoinjs.org</a>
+                    </p>
+                    <p>BitcoinJS Bower Package: 
+                        <a href="https://github.com/jeffscottward/bitcoinjs-bower-pkg" target="_BLANK">https://github.com/jeffscottward/bitcoinjs-bower-pkg</a>
+                    </p>
+                    <p>Khan Academy Bitcoin Course:
+                        <a href="http://youtu.be/Y-w7SnQWwVA?list=PL73q2zDIiGK_O5OYdK5vxcezzC0zu_3OS" target="_BLANK">http://goo.gl/MMwahv</a>
+                    </P>
+                    <p>Bitcoin Protocol Specification: 
+                        <a href="https://en.bitcoin.it/wiki/Protocol_specification">https://en.bitcoin.it/wiki/Protocol_specification</a>
+                                </p>
+	            	<p>Bitcoin WhitePaper: 
+	            		<a href="https://bitcoin.org/bitcoin.pdf" target="_BLANK">https://bitcoin.org/bitcoin.pdf</a>
+	            	</p>
+	            	<p>CoinDesk: 
+	            		<a href="http://CoinDesk.com" target="_BLANK">http://CoinDesk.com</a>
+								</p>            	
+	            	<p>Brainwallet: 
+	            		<a href="https://brainwallet.github.io/" target="_BLANK">https://brainwallet.github.io</a>
+								</p>
+                    <p>Ethereum: 
+                        <a href="http://ethereum.org" target="_BLANK">http://ethereum.org</a>
+                                </p>
+                    <p>Ethereum WhitePaper: 
+                        <a href="https://www.ethereum.org/pdfs/EthereumWhitePaper.pdf" target="_BLANK">https://www.ethereum.org/pdfs/EthereumWhitePaper.pdf</a>
+                                </p>                
+	            	<p>EtherScripter: 
+	            		<a href="http://etherscripter.com/" target="_BLANK">http://etherscripter.com</a>
+								</p>
+
+	            	<p>Mintchalk: 
+	            		<a href="http://etherscripter.com/" target="_BLANK">http://mintchalk.com</a>
+								</p>
+
+								<p> Building the Decetralized Web:
+									<a href="https://blog.ethereum.org/2014/08/18/building-decentralized-web/">http://goo.gl/KIgXDg</a>
+                                </p>
+								
+
+							</div>  	
+            </section>
+			<section>
+              <div data-markdown>##THANKS!</div>
+              <img src="images/decntralize-all-the-things.jpg" height="300"/>
+              <div data-markdown>See you at the bar!</div>
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+	    // Full list of configuration options available here:
+	    // https://github.com/hakimel/reveal.js#configuration
+	    Reveal.initialize({
+	        controls: true,
+	        progress: true,
+	        history: true,
+	        center: true,
+
+	        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+	        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+	        // Parallax scrolling
+	        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+	        // parallaxBackgroundSize: '2100px 900px',
+
+	        // Optional libraries used to extend on reveal.js
+	        dependencies: [{
+	            src: 'lib/js/classList.js',
+	            condition: function() {
+	                return !document.body.classList;
+	            }
+	        }, {
+	            src: 'plugin/markdown/marked.js',
+	            condition: function() {
+	                return !!document.querySelector('[data-markdown]');
+	            }
+	        }, {
+	            src: 'plugin/markdown/markdown.js',
+	            condition: function() {
+	                return !!document.querySelector('[data-markdown]');
+	            }
+	        }, {
+	            src: 'plugin/highlight/highlight.js',
+	            async: true,
+	            callback: function() {
+	                hljs.initHighlightingOnLoad();
+	            }
+	        }, {
+	            src: 'plugin/zoom-js/zoom.js',
+	            async: true,
+	            condition: function() {
+	                return !!document.body.classList;
+	            }
+	        }, {
+	            src: 'plugin/notes/notes.js',
+	            async: true,
+	            condition: function() {
+	                return !!document.body.classList;
+	            }
+	        }]
+	    });
+    </script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <style>
+
+    	section[data-markdown] img{
+    		max-height: 200px !important;
+    		max-width: 400px !important;
+    		background: white !important;
+    		display: inline-block !important;
+    		vertical-align: middle !important;
+    	}
+
+    	img{
+    		max-height: 500px !important;
+    	}
+
+    	.green {
+    		color: green !important;
+    	}
+
+    	.blue {
+    		color: lightblue !important;
+    	}
+
+    </style>
+
+	</body>
+</html>
